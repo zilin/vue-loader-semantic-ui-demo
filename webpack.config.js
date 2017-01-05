@@ -8,6 +8,12 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),
+  ],
   module: {
     rules: [
       {
@@ -34,6 +40,26 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'
+        }
+      },
+      {
+        test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[hash].[ext]&mimetype=application/font-woff'
+        }
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[hash].[ext]&mimetype=application/octet-stream'
+        }
+      },
+      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[hash].[ext]'
         }
       }
     ]
