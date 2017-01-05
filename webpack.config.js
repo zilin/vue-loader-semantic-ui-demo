@@ -66,7 +66,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.common.js'
+      'vue$': 'vue/dist/vue.common.js',
+      'semantic-ui$': 'semantic-ui-css/semantic.min.js'
     }
   },
   devServer: {

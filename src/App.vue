@@ -9,8 +9,6 @@
 </template>
 
 <script>
-var semantic = require('semantic-ui-css/semantic.min.js')
-
 export default {
   name: 'app',
   data () {
