@@ -56,7 +56,8 @@ module.exports = {
           name: 'fonts/[name].[hash].[ext]&mimetype=application/octet-stream'
         }
       },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
         options: {
           name: 'fonts/[name].[hash].[ext]'
